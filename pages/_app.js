@@ -20,6 +20,11 @@ import App from "next/app";
 import Head from "next/head";
 import "/styles/scss/nextjs-material-kit.scss?v=1.2.0";
  
+import { Authenticator } from '@aws-amplify/ui-react';
+import { Amplify } from 'aws-amplify';
+import '@aws-amplify/ui-react/styles.css';
+
+// Amplify.configure(outputs);
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -55,6 +60,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
+      <Authenticator>
       <React.Fragment>
         <Head>
           <meta
@@ -65,6 +71,8 @@ export default class MyApp extends App {
         </Head>
         <Component {...pageProps} />
       </React.Fragment>
+
+      </Authenticator>
     );
   }
 }

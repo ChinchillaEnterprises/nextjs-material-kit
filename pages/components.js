@@ -32,10 +32,7 @@ import styles from "/styles/jss/nextjs-material-kit/pages/components.js";
 
 
 
-import { Authenticator } from '@aws-amplify/ui-react';
-import { Amplify } from 'aws-amplify';
 
-// Amplify.configure(outputs);
 
 
 const useStyles = makeStyles(styles);
@@ -45,7 +42,6 @@ export default function Components(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Authenticator>
       <Header
         brand="NextJS Material Kit"
         rightLinks={<HeaderLinks />}
@@ -96,7 +92,6 @@ export default function Components(props) {
         <SectionDownload />
       </div>
       <Footer />
-      </Authenticator>
     </div>
   );
 }
