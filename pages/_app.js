@@ -19,6 +19,7 @@ import React from "react";
 import App from "next/app";
 import Head from "next/head";
 import "/styles/scss/nextjs-material-kit.scss?v=1.2.0";
+ 
 
 export default class MyApp extends App {
   componentDidMount() {
